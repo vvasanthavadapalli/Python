@@ -1,0 +1,189 @@
+#dictionaries_1
+students={1:'Vamsi Anand',
+              2:'Vasantha',
+              3:'Lokesh',
+              4:'Sai meghana',
+              5:'Phanith',
+              6:'Varsha'
+              }
+print('students:',students)
+
+'''sample output:
+students: {1: 'Vamsi Anand', 2: 'Vasantha', 3: 'Lokesh', 4: 'Sai meghana', 5: 'Phanith', 6: 'Varsha'}
+  '''
+#dictionaries_2
+students={1:'Ram', 2:'Sita', 3:'Lakshmi'}
+students[4]='Shiv'
+students[5]='Maha'
+students[6]='Brahma'
+print('final dict:',students)
+
+'''sample output:
+final dict: {1: 'Ram', 2: 'Sita', 3: 'Lakshmi', 4: 'Shiv', 5: 'Maha', 6: 'Brahma'}  '''
+
+#dictionaries_3
+dict={1:'key', 2:'lock', 3:'solution'}
+print('before update:',dict)
+dict[2]='problem'
+print('after update:',dict)
+
+'''sample output:
+before update: {1: 'key', 2: 'lock', 3: 'solution'}
+after update: {1: 'key', 2: 'problem', 3: 'solution'}  '''
+
+#dictionaries_4
+keys=['name','place','color']
+values=['mirchi','guntur','red']
+zip()
+data=dict(zip(keys,values))
+print('dictionary:',data)
+
+'''sample output:
+dictionary: {'name': 'mirchi', 'place': 'guntur', 'color': 'red'} '''
+
+#dictionaries_5
+employees={
+    1:{'name':'priya','department':'CSE','salary':100000},
+    2:{'name':'shankar','departmrnt':'mechanical','salary':100000},
+    3:{'name':'maheswar','department':'EEE','salary':100000}
+    }
+print('employees:',employees)
+
+'''sample output:
+employees: {1: {'name': 'priya', 'department': 'CSE', 'salary': 100000}, 2: {'name': 'shankar', 'departmrnt': 'mechanical', 'salary': 100000}, 3: {'name': 'maheswar', 'department': 'EEE', 'salary': 100000}} '''
+    
+#dictionaries_6
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "Python"
+}
+print("Keys:")
+for key in student.keys():
+    print(key)
+print("\nValues:")
+for value in student.values():
+    print(value)
+print("\nKey-Value Pairs:")
+for key, value in student.items():
+    print(key, ":", value)
+
+'''sample Output:
+Keys:
+name
+age
+course
+
+Values:
+Rahul
+20
+Python
+
+Key-Value Pairs:
+name : Rahul
+age : 20
+course : Python  '''
+
+#dictionaries_7
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "Python"
+}
+removed_value = student.pop("age")
+print("Removed value:", removed_value)
+value = student.get("marks", "Key not found")
+print("Marks:", value)
+print("Dictionary:", student)
+
+'''Output:
+Removed value: 20
+Marks: Key not found
+Dictionary: {'name': 'Rahul', 'course': 'Python'}  '''
+
+
+#dictionaries_8
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "Python"
+}
+key = "age"
+if key in student:
+    print("Key exists")
+    print("Value:", student[key])
+else:
+    print("Key does not exist")
+
+'''sample Output:
+Key exists
+Value: 20'''
+
+
+#dictionaries_9
+dict1 = {
+    "name": "Rahul",
+    "age": 20
+}
+
+dict2 = {
+    "course": "Python",
+    "marks": 90
+}
+merged1 = dict1.copy()
+merged1.update(dict2)
+print("Using update():", merged1)
+merged2 = dict1 | dict2
+print("Using | operator:", merged2)
+
+'''sample Output:
+Using update(): {'name': 'Rahul', 'age': 20, 'course': 'Python', 'marks': 90}
+Using | operator: {'name': 'Rahul', 'age': 20, 'course': 'Python', 'marks': 90}  '''
+
+
+#dictionaries_10
+prices = {
+    "Laptop": 75000,
+    "Mobile": 25000,
+    "Headphones": 5000,
+    "Keyboard": 3000,
+    "Monitor": 15000
+}
+highest_item = max(prices, key=prices.get)
+lowest_item = min(prices, key=prices.get)
+print("Highest priced item:", highest_item)
+print("Price:", prices[highest_item])
+print("Lowest priced item:", lowest_item)
+print("Price:", prices[lowest_item])
+
+'''sample Output:
+Highest priced item: Laptop
+Price: 75000
+Lowest priced item: Keyboard
+Price: 3000  '''
+
+
+#dictionaries_11
+text = "hello"
+frequency = {}
+for char in text:
+    if char in frequency:
+        frequency[char] += 1
+    else:
+        frequency[char] = 1
+print("Character frequency:", frequency)
+
+'''sample Output:
+Character frequency: {'h': 1, 'e': 1, 'l': 2, 'o': 1}  '''
+
+
+#dictionaries_12
+cubes = {number: number ** 3 for number in range(1, 11)}
+print("Numbers and their cubes:")
+print(cubes)
+
+'''sample Output:
+Numbers and their cubes:
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343, 8: 512, 9: 729, 10: 1000}  '''
+
+
